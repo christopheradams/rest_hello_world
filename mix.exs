@@ -14,7 +14,7 @@ defmodule RestHelloWorld.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:cowboy, :logger],
      mod: {RestHelloWorld, []}]
   end
 
@@ -28,6 +28,6 @@ defmodule RestHelloWorld.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:cowboy, "~> 1.0"}]
   end
 end

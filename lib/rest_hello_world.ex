@@ -6,6 +6,20 @@ defmodule RestHelloWorld do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+    dispatch = :cowboy_router.compile([
+      {:_,
+       [
+         {"/", ToppageHandler, []}
+       ]}
+    ])
+
+    {:ok, _} = :cowboy.start_http(
+      :http,
+      100,
+      [{:port, 8080}],
+      [{:env, [{:dispatch, dispatch}]}]
+    )
+
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: RestHelloWorld.Worker.start_link(arg1, arg2, arg3)

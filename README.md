@@ -1,24 +1,5 @@
 # RestHelloWorld
 
-**TODO: Add description**
+Cowboy REST handler example ported to Elixir:
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `rest_hello_world` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:rest_hello_world, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `rest_hello_world` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:rest_hello_world]]
-    end
-    ```
-
+https://github.com/ninenines/cowboy/tree/1.0.x/examples/rest_hello_world
